@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:configure="com.liuqi.screenqueen.widage.ScreenWidgetConfigureActivity"
+                    android:initialKeyguardLayout="@layout/screen_widget"
+                    android:initialLayout="@layout/screen_widget"
+                    android:minHeight="40dp"
+                    android:minWidth="110dp"
+                    android:previewImage="@drawable/ic_widget_words"
+                    android:resizeMode="horizontal|vertical"
+                    android:updatePeriodMillis="86400000"
+                    android:widgetCategory="home_screen">
+</appwidget-provider>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">屏幕王后</string>
+    <string name="appwidget_text">语录</string>
+    <string name="configure">设置</string>
+    <string name="modify_widget">修改</string>
+    <string name="add_widget">Add widget</string>
+</resources>
