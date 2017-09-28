@@ -1,6 +1,7 @@
 package com.liuqi.screenqueen.domin.network
 
 
+import com.liuqi.screenqueen.domin.model.BeautyPage
 import com.liuqi.screenqueen.getHtml
 import org.jsoup.Jsoup
 
@@ -8,25 +9,30 @@ import org.jsoup.Jsoup
  * @author wupanjie
  */
 class GirlSource() {
-    fun obtain(url: String): Pair<String, String> {
+    fun obtain(url: String): BeautyPage {
         val html = getHtml(url)
         val doc = Jsoup.parse(html)
+        val page = BeautyPage("", "", "");
         var img = ""
-        var link = ""
+        var linkpre = ""
+        var linknext = ""
         val elements = doc.select("div.con")
         for (element in elements) {
             img = element.select("img").attr("src")
             val links = element.select("a")
             for (a in links) {
                 if (a.select("span").text().contains("下一页")) {
-                    link = a.attr("href")
-                    break
+                    linkpre = a.attr("href")
                 }
-
+                if (a.select("span").text().contains("上一页")) {
+                    linknext = a.attr("href")
+                }
             }
+            page.pre = linkpre;
+            page.current = img;
+            page.next = linknext;
         }
-        val pair = Pair<String, String>(img, link)
-        return pair
+        return page
     }
 
 }

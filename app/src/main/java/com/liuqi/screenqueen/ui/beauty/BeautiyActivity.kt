@@ -2,9 +2,13 @@ package com.liuqi.screenqueen.ui.beauty
 
 import android.content.Intent
 import android.os.Bundle
+import android.support.v4.view.MenuItemCompat
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.support.v7.widget.SearchView
+import android.text.InputType
+import android.view.Menu
 import android.view.View
 import com.liuqi.screenqueen.R
 import com.liuqi.screenqueen.domin.model.Cover
@@ -14,6 +18,7 @@ import kotlinx.android.synthetic.main.activity_beautiy.*
 import org.jetbrains.anko.async
 import org.jetbrains.anko.uiThread
 import java.util.*
+
 
 class BeautiyActivity : AppCompatActivity() {
     companion object {
@@ -26,6 +31,11 @@ class BeautiyActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_beautiy)
+
+        main_toolbar.setTitle("美女");
+        main_toolbar.setLogo(R.mipmap.ic_pingguo);
+        //设置导航图标要在setSupportActionBar方法之后
+        setSupportActionBar(main_toolbar);
         initView()
     }
 
@@ -76,5 +86,12 @@ class BeautiyActivity : AppCompatActivity() {
         }
     }
 
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        getMenuInflater().inflate(R.menu.menu_beauty, menu);
+        val searchItem = menu?.findItem(R.id.action_search)
+        val searchView = MenuItemCompat.getActionView(searchItem) as SearchView
+        searchView.inputType = InputType.TYPE_CLASS_NUMBER
+        return true
+    }
 
 }
