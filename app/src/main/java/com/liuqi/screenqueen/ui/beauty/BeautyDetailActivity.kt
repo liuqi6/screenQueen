@@ -76,7 +76,7 @@ class BeautyDetailActivity : AppCompatActivity() {
         val data = girlDetail as BeautyPage
 
         uiThread {
-            Picasso.with(this@BeautyDetailActivity).load(girlDetail.current).centerInside().into(detailImage)
+            Picasso.with(this@BeautyDetailActivity).load(girlDetail.current).into(detailImage)
         }
     }
 
@@ -141,12 +141,12 @@ class BeautyDetailActivity : AppCompatActivity() {
             if (e1.getX() - e2.getX() > FLING_MIN_DISTANCE
                     && Math.abs(velocityX) > FLING_MIN_VELOCITY) {
                 // Fling left
-                url = girlDetail.pre
+                url = girlDetail.next
                 load2()
             } else if (e2.getX() - e1.getX() > FLING_MIN_DISTANCE
                     && Math.abs(velocityX) > FLING_MIN_VELOCITY) {
                 // Fling right
-                url = girlDetail.next
+                url = girlDetail.pre
                 load2()
             }
             return false;

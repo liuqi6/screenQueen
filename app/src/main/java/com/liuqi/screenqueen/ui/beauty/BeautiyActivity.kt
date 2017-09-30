@@ -8,6 +8,7 @@ import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.SearchView
 import android.text.InputType
+import android.text.TextUtils
 import android.view.Menu
 import android.view.View
 import com.liuqi.screenqueen.R
@@ -16,6 +17,7 @@ import com.liuqi.screenqueen.domin.network.BeautySource
 import com.liuqi.screenqueen.ui.beauty.adapter.CoverAdapter
 import kotlinx.android.synthetic.main.activity_beautiy.*
 import org.jetbrains.anko.async
+import org.jetbrains.anko.editText
 import org.jetbrains.anko.uiThread
 import java.util.*
 
@@ -91,6 +93,34 @@ class BeautiyActivity : AppCompatActivity() {
         val searchItem = menu?.findItem(R.id.action_search)
         val searchView = MenuItemCompat.getActionView(searchItem) as SearchView
         searchView.inputType = InputType.TYPE_CLASS_NUMBER
+        searchView.setSubmitButtonEnabled(true);
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                if (!TextUtils.isEmpty(query)) {
+                    try {
+                        currentPage = Integer.parseInt(query)
+                        load()
+                    } catch (e: NumberFormatException) {
+                    }
+
+                }
+                return true
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                return false
+            }
+        })
+        searchView.setOnSearchClickListener {
+            if (!TextUtils.isEmpty(searchView.editText().text.toString())) {
+                try {
+                    currentPage = Integer.parseInt(searchView.editText().text.toString())
+                    load()
+                } catch (e: NumberFormatException) {
+                }
+
+            }
+        }
         return true
     }
 
