@@ -7,7 +7,12 @@ import com.liuqi.screenqueen.log
 import org.jsoup.Jsoup
 
 /**
- * @author wupanjie
+ * @author liuqi 2017/9/2 0002
+ * @Package com.liuqi.screenqueen.domin.network.GirlSource
+ * @Title: GirlSource
+ * @Description: (function)
+ * Copyright (c) liuqi owner
+ * Create DateTime: 2017/9/2 0002
  */
 class GirlSource() {
     fun obtain(url: String): BeautyPage {

@@ -1,0 +1,8 @@
+<resources>
+    <declare-styleable name="StampView">
+        <attr name="stamp_text" format="string|reference"/>
+        <attr name="stamp_bg" format="color|reference"/>
+        <attr name="stamp_shape" format="integer"/>
+        <attr name="stamp_font_color" format="color|reference"/>
+    </declare-styleable>
+</resources>

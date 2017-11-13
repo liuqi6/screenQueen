@@ -22,7 +22,14 @@ import org.jetbrains.anko.async
 import org.jetbrains.anko.uiThread
 import java.io.FileOutputStream
 
-
+/**
+ * @author liuqi 2017/9/2 0002
+ * @Package com.liuqi.screenqueen.ui.beauty.BeautiyActivity
+ * @Title: BeautiyActivity
+ * @Description: (function)
+ * Copyright (c) liuqi owner
+ * Create DateTime: 2017/9/2 0002
+ */
 class BeautyDetailActivity : AppCompatActivity() {
     lateinit var url: String
     lateinit var girlDetail: BeautyPage

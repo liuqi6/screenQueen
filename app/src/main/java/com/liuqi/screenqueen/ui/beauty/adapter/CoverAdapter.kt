@@ -11,7 +11,12 @@ import kotlinx.android.synthetic.main.item_cover.view.*
 import java.util.*
 
 /**
- * @author wupanjie
+ * @author liuqi 2017/9/2 0002
+ * @Package com.liuqi.screenqueen.ui.beauty.adapter
+ * @Title: CoverAdapter
+ * @Description: (function)
+ * Copyright (c) liuqi owner
+ * Create DateTime: 2017/9/2 0002
  */
 class CoverAdapter(var data: List<Cover> = ArrayList(), var itemClick: (View, Int) -> Unit)
     : RecyclerView.Adapter<CoverAdapter.CoverViewHolder>() {

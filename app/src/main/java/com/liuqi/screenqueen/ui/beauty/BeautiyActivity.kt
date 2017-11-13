@@ -21,7 +21,14 @@ import org.jetbrains.anko.editText
 import org.jetbrains.anko.uiThread
 import java.util.*
 
-
+/**
+ * @author liuqi 2017/9/2 0002
+ * @Package com.liuqi.screenqueen.ui.beauty.BeautiyActivity
+ * @Title: BeautiyActivity
+ * @Description: (function)
+ * Copyright (c) liuqi owner
+ * Create DateTime: 2017/9/2 0002
+ */
 class BeautiyActivity : AppCompatActivity() {
     companion object {
         val AIM_URL = "http://www.4600m.net/fenlei/tupian/meinv"
