@@ -5,7 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.liuqi.screenqueen.ui.beauty.BeautiyActivity
-import com.liuqi.screenqueen.widage.ScreenWidgetConfigureActivity
+import com.liuqi.screenqueen.widget.ScreenWidgetConfigureActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {

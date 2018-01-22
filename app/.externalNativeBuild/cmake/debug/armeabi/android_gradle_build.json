@@ -1,9 +1,12 @@
 
 {
-	"buildFiles" : [ "F:/workspace/ScreenQueen/app/CMakeLists.txt" ],
+	"buildFiles" : 
+	[
+		"/Users/liuqi/AndroidStudioProjects/othersource/screenQueen/app/CMakeLists.txt"
+	],
 	"cleanCommands" : 
 	[
-		"E:\\SDK\\sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build F:\\workspace\\ScreenQueen\\app\\.externalNativeBuild\\cmake\\debug\\armeabi --target clean"
+		"/Users/liuqi/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/liuqi/AndroidStudioProjects/othersource/screenQueen/app/.externalNativeBuild/cmake/debug/armeabi --target clean"
 	],
 	"cppFileExtensions" : [ "cpp" ],
 	"libraries" : 
@@ -12,27 +15,27 @@
 		{
 			"abi" : "armeabi",
 			"artifactName" : "native-lib",
-			"buildCommand" : "E:\\SDK\\sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build F:\\workspace\\ScreenQueen\\app\\.externalNativeBuild\\cmake\\debug\\armeabi --target native-lib",
+			"buildCommand" : "/Users/liuqi/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/liuqi/AndroidStudioProjects/othersource/screenQueen/app/.externalNativeBuild/cmake/debug/armeabi --target native-lib",
 			"buildType" : "debug",
 			"files" : 
 			[
 				
 				{
-					"flags" : "  --target=armv5te-none-linux-androideabi --gcc-toolchain=E:/SDK/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=E:/SDK/sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -isystem E:\\SDK\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem E:\\SDK\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\armeabi\\include -isystem E:\\SDK\\sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem E:/SDK/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv5te -mtune=xscale -msoft-float -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -frtti -fexceptions -O0 -fno-limit-debug-info  -fPIC    -c ",
-					"src" : "F:/workspace/ScreenQueen/app/src/main/cpp/native-lib.cpp",
-					"workingDirectory" : "F:/workspace/ScreenQueen/app/.externalNativeBuild/cmake/debug/armeabi"
+					"flags" : "  -target armv5te-none-linux-androideabi -gcc-toolchain /Users/liuqi/NDK/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/liuqi/NDK/android-ndk-r13b/platforms/android-21/arch-arm  -Dnative_lib_EXPORTS -isystem /Users/liuqi/NDK/android-ndk-r13b/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /Users/liuqi/NDK/android-ndk-r13b/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi/include -isystem /Users/liuqi/NDK/android-ndk-r13b/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv5te -mtune=xscale -msoft-float -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv5te -mtune=xscale -msoft-float -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -frtti -fexceptions -O0 -fno-limit-debug-info -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "/Users/liuqi/AndroidStudioProjects/othersource/screenQueen/app/src/main/cpp/native-lib.cpp",
+					"workingDirectory" : "/Users/liuqi/AndroidStudioProjects/othersource/screenQueen/app/.externalNativeBuild/cmake/debug/armeabi"
 				}
 			],
-			"output" : "F:/workspace/ScreenQueen/app/build/intermediates/cmake/debug/obj/armeabi/libnative-lib.so",
-			"toolchain" : "1960999449"
+			"output" : "/Users/liuqi/AndroidStudioProjects/othersource/screenQueen/app/build/intermediates/cmake/debug/obj/armeabi/libnative-lib.so",
+			"toolchain" : "15469867927305789927"
 		}
 	},
 	"toolchains" : 
 	{
-		"1960999449" : 
+		"15469867927305789927" : 
 		{
-			"cCompilerExecutable" : "E:/SDK/sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe",
-			"cppCompilerExecutable" : "E:/SDK/sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe"
+			"cCompilerExecutable" : "/Users/liuqi/NDK/android-ndk-r13b/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang",
+			"cppCompilerExecutable" : "/Users/liuqi/NDK/android-ndk-r13b/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++"
 		}
 	}
 }
